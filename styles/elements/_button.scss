@@ -1,0 +1,84 @@
+//
+// Buttons //
+//
+a {
+	color: black;
+	@include transition(linear 0.1s);
+	text-decoration: none;
+	&:hover {
+		color: $black-07;
+		text-decoration: none;
+	}
+}
+button {
+	background: transparent;
+	box-shadow: none;
+	border: 0;
+	padding: 0;
+	cursor: pointer;
+}
+a, button {
+	&:focus, &:active {
+		box-shadow: none;
+		outline: 0;
+	}
+}
+
+.button {
+	position: relative;
+	display: inline-block;
+	overflow: hidden;
+	background: black;
+	border-radius: 40px;
+	padding: 12px 28px;
+	color: white;
+	font-family: $font-family-tertiary;
+	font-weight: 500;
+	@include transition(ease-out 0.12s);
+	&:hover {
+		background: $black-09;
+		color: white;
+	}
+	&.button-outline {
+		background: transparent;
+		border: 1px dashed black;
+		color: black;
+		&:hover {
+			background: black;
+			color: white;
+		}
+	}
+	&.button-lg {
+		padding: 14px 32px;
+	}
+	&.non-disabled {
+		cursor: not-allowed;
+	}
+}
+
+.button-circle {
+	position: relative;
+	display: inline-block;
+	overflow: hidden;
+	background: black;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 50px;
+	color: white;
+	@include transition(ease-out 0.12s);
+	&:hover {
+		background: $black-09;
+		color: white;
+	}
+	&.button-circle-outline {
+		background: transparent;
+		border: 1px dashed black;
+		color: black;
+		&:hover {
+			background: black;
+			color: white;
+		}
+	}
+}

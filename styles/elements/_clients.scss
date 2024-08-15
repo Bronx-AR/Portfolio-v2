@@ -1,0 +1,58 @@
+//
+// Clients //
+//
+.client-box {
+	a {
+		img {
+			opacity: 0.5;
+			width: 100%;
+			@include transition(ease-out 0.12s);
+		}
+		&:hover {
+			img {
+				opacity: 1;
+			}
+		}
+	}
+}
+
+.clients-slider {
+	margin: 0 90px;
+	@include breakpoint-less(md) {
+		margin: 0 70px;
+	}
+}
+
+.clients-prev,
+.clients-next {
+	position: absolute;
+	top: 50%;
+	@include transform(translateY(-50%));
+	display: inline-block;
+	background: transparent;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	border: 1px dashed black;
+	text-align: center;
+	line-height: 40px;
+	color: black;
+	@include transition(ease-out 0.12s);
+	i {
+		color: black;
+		@include transition(ease-out 0.12s);
+	}
+	&:hover {
+		background: black;
+		color: white;
+		i {
+			color: white;
+		}
+	}
+}
+.clients-prev {
+	left: 0;
+}
+.clients-next {
+	right: 0;
+}

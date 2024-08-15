@@ -1,0 +1,53 @@
+//
+// Forms //
+//
+input:not(.form-check-input), 
+textarea {
+	background: transparent;
+	width: 100%;
+	margin-bottom: 1rem;
+	padding: 14px 24px;
+	border: 1px dashed $black-04;
+	border-radius: 26px;
+	box-shadow: none;
+	font: 400 16px $font-family-primary;
+	@include transition(ease-out 0.12s);
+	&:focus, &:active {
+		outline: 0;
+		box-shadow: none;
+	}
+}
+textarea {
+	height: 180px;
+}
+input:not(.form-check-input), textarea, .form-control {
+	color: $primary;
+	&::-webkit-input-placeholder { color: $primary-lighter; }
+	&::-moz-placeholder { color: $primary-lighter; }
+	&:-ms-placeholder { color: $primary-lighter; }
+	&::-ms-placeholder { color: $primary-lighter; }
+	&::placeholder { color: $primary-lighter; }
+	&:focus {
+		border-color: black;
+	}
+}
+label {
+	font-size: 15px;
+}
+
+
+//
+// Contact Form Styles //
+//
+.submit-result {
+	span {
+		@include transition(ease-out 0.2s);
+		&.show-result {
+			margin-top: 24px;
+			display: block;
+		}
+		&#success { color: $green; }
+		&#error { color: $red; }
+		.error-color { background: rgba(255, 0, 0, 0.1); }
+	}
+}
