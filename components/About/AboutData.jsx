@@ -3,14 +3,13 @@ import HeroAvatar from '@/public/images/avatar.png';
 export const aboutData = {
     mainData: {
         heroAvatar: HeroAvatar,
-        title: "Hi! I'm Christina Green.",
-        biography: "A professioanal UI & UX designer based in Mongolia.",
-        hoursOfExperience: "20,000",
-        projectsDone: "100",
-        happyClients: "4,000",
+        title: "Hi! I'm Arnaud Quatrevaux.",
+        biography: "A profesional Front-End developer based in Toulouse.",
+        hoursOfExperience: "26,000",
+        projectsDone: "10",
         button: {
             title: 'Let\'s Talk',
-            url: '#',
+            url: '/contact',
         }
     },
     skills: [

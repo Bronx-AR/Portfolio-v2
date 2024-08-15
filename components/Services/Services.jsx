@@ -16,7 +16,13 @@ const Services = () => {
                                     </div>
                                     <h2 className="fw-medium fst-italic text-black-02 mb-0">{item.title}</h2>
                                 </div>
-                                <p>{item.description}</p>
+                                <span className="count">{item.progress}%</span>
+                                <div className="progress-bar-wrap">
+                                    <div
+                                        className={`progress-line ${item.progressClass}`}
+                                        style={{ width: `${item.progress}%` }}
+                                    ></div>
+                                </div>
                             </div>
                         </div>
                     ))}

@@ -24,10 +24,6 @@ const About = () => {
                                 <h2 className="display-6 fw-medium mb-0">{aboutData.mainData.projectsDone}+</h2>
                                 <span>Projects Done</span>
                             </div>
-                            <div className="col-12 col-sm-4 col-xl-12">
-                                <h2 className="display-6 fw-medium mb-0">{aboutData.mainData.happyClients}+</h2>
-                                <span>Happy Clients</span>
-                            </div>
                         </div> {/* end row(inner) */}
                     </div>
                 </div> {/* end row */}

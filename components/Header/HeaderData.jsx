@@ -1,5 +1,5 @@
 export const headerData = {
-    logo: 'Naru',
+    logo: 'Bronx',
     navlinks: [
         {
             url: '/',

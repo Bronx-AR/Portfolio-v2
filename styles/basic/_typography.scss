@@ -18,6 +18,50 @@ h1,h2,h3,h4,h5,h6 {
 	}
 }
 
+.progress-bar-wrap {
+	height: 6px;
+	background: #edf2f2;
+	border-radius: 6px;
+	overflow: inherit;
+}
+
+.progress-line {
+	height: 100%;
+	border-radius: inherit;
+}
+
+.progress-bg-1 {
+	background-color: #C76494;
+}
+
+.progress-bg-2 {
+  background-color: #EFD81D;
+}
+
+.progress-bg-3 {
+  background-color: #7094B7;
+}
+
+.progress-bg-4 {
+  background-color: #08749F;
+}
+
+.progress-bg-5 {
+  background-color: #000;
+}
+
+.progress-bg-6 {
+  background-color: #854AC7;
+}
+
+.progress-bg-7 {
+  background-color: #6A9500;
+}
+
+.progress-bg-8 {
+  background-color: #55AD47;
+}
+
 p {
 	margin: 0;
 	line-height: 1.74;
