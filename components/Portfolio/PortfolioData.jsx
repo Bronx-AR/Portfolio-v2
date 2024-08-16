@@ -1,5 +1,7 @@
 import PortfolioImg from '@/public/images/portfolio.png';
 import MainImage from '@/public/images/portfolio.png';
+import MainImageBooki from '@/public/images/work_main/Auberge-la-Canebiere.webp';
+import PortfolioImgBooki1 from '@/public/images/work/Booki1.webp';
 
 export const portfolioData = {
     mainData: {
@@ -24,23 +26,23 @@ export const portfolioData = {
     ],
     projects: [
         {
-            title: 'Project Title 1',
-            slug: 'project-title-1',
+            title: 'Booki',
+            slug: 'Booki',
             description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
             keywords: 'key1, key2, key3',
             category: 'First',
             services: 'Service Title',
             client: 'FlaTheme',
-            duration: '235 Hours',
+            duration: '60 hours',
             projectLink: {
-                title: 'www.flatheme.net',
+                title: 'Code preview',
                 ur: '#'
             },
             content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-            mainImage: MainImage,
+            mainImage: MainImageBooki,
             images: [
                 {
-                    image: PortfolioImg,
+                    image: PortfolioImgBooki1,
                     alt: 'Image Alt'
                 },
                 {
