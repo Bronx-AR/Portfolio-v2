@@ -1,6 +1,6 @@
 export const mapData = {
     mainData: {
-        lat: -3.745,
-        lng: -38.523,
+        lat: -42.918380,
+        lng: -1.642270,
     },
 };

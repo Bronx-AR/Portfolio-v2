@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { contactData } from './ContactData';
-import { Map } from '..';
 
 const Contact = () => {
     const [formData, setFormData] = useState({
@@ -88,10 +87,6 @@ const Contact = () => {
             <div className="section-sm">
                 <div className="container-fluid">
                     <div className="row g-5">
-                        <div className="col-12 col-lg-6">
-                            <Map />
-                        </div>
-                        <div className="col-12 col-lg-6">
                             {/* Contact Form */}
                             <div className="contact-form text-xl-end">
                                 <form method="post" id="contactform" onSubmit={handleSubmit}>
@@ -119,7 +114,6 @@ const Contact = () => {
                                     )}
                                 </div>
                             </div> {/* end contact-form */}
-                        </div>
                     </div> {/* end row */}
                 </div>
             </div>

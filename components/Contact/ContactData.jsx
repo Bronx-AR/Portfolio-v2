@@ -1,14 +1,14 @@
 export const contactData = {
     mainData: {
         title: "Get In Touch",
-        phone: "+976 1234 4444",
-        email: "contact@flatheme.net",
-        whatsapp: "+976 1234 4444",
-        address: "121 King St, Melbourne VIC 3000",
+        phone: "+33 6 45 48 23 18",
+        email: "arnaudqpro@outlook.com",
+        whatsapp: "+33 6 45 48 23 18",
+        address: "09 Rue Centrale, Saint Paul de Jarrat, 09000",
     },
     contactInfo: {
-        title: "contact",
-        emailDomain: "@flatheme.net"
+        title: "arnaudqpro",
+        emailDomain: "@outlook.com"
     },
     seoPage: {
         title: 'Contact',

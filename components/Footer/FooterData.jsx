@@ -1,4 +1,4 @@
 export const footerData = {
-    name: 'FlaTheme',
+    name: 'Arnaud',
     copyWriteText: 'All Rights Reserved.',
 };
