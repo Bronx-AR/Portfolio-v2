@@ -1,4 +1,4 @@
-import HeroAvatar from '@/public/images/avatar.png';
+import HeroAvatar from '@/public/images/avatar.jpg';
 
 export const aboutData = {
     mainData: {

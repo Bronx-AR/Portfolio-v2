@@ -12,7 +12,7 @@ const Portfolio = () => {
                 {portfolioData.projects.map((item, index) => (
                     item.trending && (
                         <div key={index} className="col-12 col-md-6 portfolio-item">
-                            <div className="portfolio-box" data-hover-caption={item.title}>
+                            <div className="portfolio-box">
                                 <Link href={`portfolio/${item.slug}`}>
                                     <div className="portfolio-img">
                                         <Image src={item.mainImage} alt={item.title} placeholder="blur" />
