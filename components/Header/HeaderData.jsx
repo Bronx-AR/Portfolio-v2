@@ -16,15 +16,11 @@ export const headerData = {
     ],
     socialMediaLinks: [
         {
-            url: '#',
-            bootstrapIcon: 'bi bi-facebook',
-        },
-        {
-            url: '#',
+            url: 'https://x.com/ArnaudQ09',
             bootstrapIcon: 'bi bi-twitter-x',
         },
         {
-            url: '#',
+            url: 'https://www.instagram.com/arnaudqtx/',
             bootstrapIcon: 'bi bi-instagram',
         },
     ]

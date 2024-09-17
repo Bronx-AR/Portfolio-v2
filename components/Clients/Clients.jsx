@@ -9,20 +9,6 @@ const Clients = () => {
     const nextRef = useRef(null);
     const sliderRef = useRef(null);
 
-    const updateNavigation = (swiper) => {
-        if (prevRef.current && nextRef.current) {
-            swiper.params.navigation.prevEl = prevRef.current;
-            swiper.params.navigation.nextEl = nextRef.current;
-            swiper.navigation.update();
-        }
-    };
-
-    useEffect(() => {
-        if (sliderRef.current) {
-            updateNavigation(sliderRef.current);
-        }
-    }, []);
-
     return (
         <div className="section pt-0">
             <div className="container-fluid">
