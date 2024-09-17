@@ -6,7 +6,7 @@ import MainImageOhMyFood from '@/public/images/work_main/jay-wennington-N_Y88TWm
 import PortfolioImgOhMyFood from '@/public/images/work/Ohmyfood.webp';
 import PortfolioImgOhMyFood1 from '@/public/images/work/Ohmyfood1.webp';
 import MainImagePrintit from '@/public/images/work_main/colors.webp';
-import PortfolioImgPrintit from '@/public/images/work/Print-it.webp';
+import PortfolioImgPrintit from '@/public/images/work/Print-It.webp';
 import PortfolioImgPrintit1 from '@/public/images/work/Print-it1.webp';
 import MainImageSophieBluel from '@/public/images/work_main/sophie-bluel.webp';
 import PortfolioImgSophieBluel from '@/public/images/work/Sophie-Bluel.webp';
