@@ -1,0 +1,59 @@
+.header {
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 40;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: clamp(20px, 3vh, 36px) var(--head-x);
+  font-size: var(--fs-ui);
+  line-height: 1;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  pointer-events: none; /* seuls les liens captent la souris : le carrousel reste utilisable dessous */
+}
+
+.header a {
+  pointer-events: auto;
+}
+
+.logo {
+  color: var(--ink);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 0.9em;
+  transition:
+    opacity 0.6s var(--ease-out),
+    visibility 0.6s;
+}
+
+.nav[data-hidden='true'] {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.nav a {
+  color: var(--muted);
+  transition: color 0.5s var(--ease-out);
+}
+
+.nav a[aria-current='page'] {
+  color: var(--ink);
+}
+
+.rule {
+  display: block;
+  width: clamp(28px, 10.4vw, 200px);
+  height: 1px;
+  background: var(--ink);
+}
+
+@media (max-width: 899px) {
+  .header {
+    padding-bottom: 28px;
+    background: linear-gradient(var(--bg) 55%, transparent);
+  }
+}

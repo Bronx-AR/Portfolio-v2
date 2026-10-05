@@ -1,0 +1,41 @@
+/* Positionné comme sur la maquette : calé sur le bord gauche de la colonne d'images, un peu au-dessus du milieu */
+.about {
+  position: absolute;
+  z-index: 10;
+  top: 42vh;
+  left: calc(50% - var(--col-w) / 2 - min(1.3vw, 19px));
+  width: min(26vw, 420px);
+}
+
+.about [data-line] {
+  opacity: 0; /* révélé par GSAP */
+}
+
+.title {
+  margin: 0 0 3.2em;
+  font-size: clamp(14px, 1.39vw, 20px); /* "Coder & Designer" — 20px sur la maquette Figma 1440px */
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.bio {
+  margin: 0 0 2.6em;
+  font-size: clamp(11px, 0.83vw, 12px); /* bio — 12px sur la maquette Figma 1440px */
+  line-height: 1.4;
+}
+
+.mail {
+  display: inline-block;
+  font-size: clamp(11px, 0.83vw, 12px); /* email — 12px sur la maquette Figma 1440px */
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 899px) {
+  .about {
+    top: 30vh;
+    left: var(--pad-x);
+    width: calc(100% - 2 * var(--pad-x));
+  }
+}

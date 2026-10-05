@@ -1,0 +1,165 @@
+.scene {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  touch-action: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* ------------------------------------------------------------ colonne d'images */
+.column {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: var(--col-w);
+  transform: translateX(-50%);
+  overflow: hidden;
+  visibility: hidden; /* révélée par le JS une fois les images positionnées (pas de flash au chargement) */
+}
+
+.column[inert] {
+  pointer-events: none;
+}
+
+.item {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 2; /* ratio des images de la maquette */
+  will-change: transform;
+}
+
+/* +1px en bas : recouvre la couture entre deux images (pas de trait blanc au sous-pixel) */
+.frame {
+  position: absolute;
+  inset: 0 0 -1px 0;
+  overflow: hidden;
+}
+
+.frame img {
+  object-fit: cover;
+  transform: scale(1.14);
+  will-change: transform;
+}
+
+/* ------------------------------------------------------------ liste des projets */
+.lists {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  --row: clamp(64px, 12.1vh, 140px); /* pas de 154px sur 1270px dans la référence */
+}
+
+.list {
+  position: absolute;
+  top: calc(50vh - var(--row) * var(--n, 4) / 2); /* bloc centré sur l'axe de l'image active */
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.left {
+  left: 8.8vw; /* numéros : x = 225 / 2558 */
+  right: 50%;
+}
+
+.right {
+  left: 74vw; /* numéros : x = 1892 / 2558 */
+  right: 8.8vw; /* noms alignés à droite : marge 226 / 2558 */
+}
+
+.list li {
+  display: flex;
+  align-items: center;
+  height: var(--row);
+  opacity: 0; /* révélé par GSAP */
+}
+
+.entry {
+  display: flex;
+  width: 100%;
+  align-items: baseline;
+  justify-content: space-between;
+  color: var(--muted);
+  font-size: var(--fs-ui);
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-align: left;
+  pointer-events: auto;
+  transition:
+    color 0.5s var(--ease-out),
+    font-weight 0.5s var(--ease-out);
+}
+
+.entry:hover {
+  color: #4b4b4b;
+}
+
+/* Liste de gauche : numéro + nom regroupés près de la marge (comme sur la référence),
+   au lieu d'être étalés sur toute la largeur du bloc. */
+.left .entry {
+  justify-content: flex-start;
+}
+
+/* le nom démarre toujours à x = 437 / 2558 (17.1vw), quelle que soit la largeur du numéro */
+.left .num {
+  flex: 0 0 calc(17.1vw - 8.8vw);
+}
+
+.left .name {
+  align-items: flex-start;
+  text-align: left;
+}
+
+.entry[data-active='true'] {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+/* Réserve la largeur du texte en gras : pas de micro-décalage au changement de graisse */
+.name {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+}
+
+.name::after {
+  content: attr(data-text);
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+  font-weight: 600;
+  pointer-events: none;
+}
+
+.caption {
+  display: none;
+  opacity: 0;
+}
+
+/* ------------------------------------------------------------ mobile (non défini dans Figma) */
+@media (max-width: 899px) {
+  .lists {
+    display: none;
+  }
+
+  .caption {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: calc(env(safe-area-inset-bottom, 0px) + 6vh);
+    display: block;
+    margin: 0;
+    text-align: center;
+    font-size: var(--fs-ui);
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+}

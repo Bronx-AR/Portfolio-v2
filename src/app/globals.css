@@ -1,0 +1,136 @@
+/* ============================================================ tokens */
+:root {
+  --bg: #ffffff;
+  --ink: #0b0b0b;
+  --muted: #8b8b8b;
+
+  --font-ui: var(--font-display), 'Bodoni 72', Didot, 'Playfair Display', 'Times New Roman', serif;
+
+  --pad-x: 8.8vw; /* marge latérale des listes / du rail — proportion de la référence (225px sur 2558px) */
+  --head-x: clamp(24px, 3.6vw, 52px); /* marge latérale du header (inchangée) */
+  --col-w: min(38vw, 550px); /* resserrée par rapport à l'originale, mais assez large pour garder une grande image dominante */
+  --fs-ui: clamp(14px, 1.38vw, 20px); /* logo, nav, liste des projets — 20px sur la maquette Figma 1440px */
+
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@media (max-width: 899px) {
+  :root {
+    --pad-x: 24px;
+    --head-x: 24px;
+    --col-w: 74vw;
+    --fs-ui: 15px;
+  }
+}
+
+/* ============================================================ reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  overscroll-behavior: none;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-ui);
+  font-size: var(--fs-ui);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1,
+p {
+  margin: 0;
+}
+
+:focus-visible {
+  outline: 1px solid var(--ink);
+  outline-offset: 5px;
+}
+
+::selection {
+  background: var(--ink);
+  color: var(--bg);
+}
+
+/* ============================================================ curseur personnalisé */
+html.has-cursor,
+html.has-cursor * {
+  cursor: none !important;
+}
+
+/* ============================================================ transitions de pages */
+.transition-layer {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  pointer-events: none;
+}
+
+.shared-clone {
+  position: fixed;
+  overflow: hidden;
+}
+
+.shared-clone img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform-origin: 50% 50%;
+}
+
+/* Pendant une transition, on gèle les interactions de la page */
+html[data-transitioning] body {
+  pointer-events: none;
+}
+
+/* ============================================================ Lenis (scroll fluide) */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+/* ============================================================ accessibilité */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
